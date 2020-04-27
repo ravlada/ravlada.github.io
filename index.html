@@ -3,10 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Влада Ракипова</title>
+    <title>Нарисуй Владе аватар для Вконтакте | Влада Ракипова</title>
+    <link rel="stylesheet" href="/vendors/drawingboard.min.css" />
+    <style>
+      #board,
+      html {
+        height: 100%;
+      }
+      h1,
+      summary span {
+        text-align: center;
+      }
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      :after,
+      :before {
+        box-sizing: inherit;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        margin: 0;
+        padding: 16px;
+        font-size: 1.2em;
+        font-family: sans-serif;
+      }
+      #board {
+        width: 100%;
+        max-width: 432px;
+        height: 465px;
+        margin-bottom: 20px;
+      }
+      .drawing-board-canvas-wrapper {
+        border: 3px solid #000;
+      }
+      .drawing-board-controls {
+        overflow-x: initial;
+      }
+      details {
+        margin-bottom: 25px;
+        width: 100%;
+        max-width: 400px;
+      }
+      summary {
+        display: block;
+        margin: 0 auto;
+        width: 25px;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary span {
+        display: block;
+        border: 1px solid #000;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      button {
+        padding: 10px;
+        margin-bottom: 50px;
+      }
+    </style>
   </head>
-
   <body>
-    <h1>Влада Ракипова</h1>
+    <h1>
+      Нарисуй Владе аватар для&nbsp;<a href="https://vk.com/ravlada">Вконтакте</a>
+    </h1>
+    <details>
+      <summary><span>?</span></summary>
+      <div>
+        <p>
+          Нарисуй что-нибудь и&nbsp;нажми кнопку, чтобы обновить мой аватар
+          на&nbsp;Вконтакте. Посмотреть можно здесь:
+          <a href="https://vk.com/ravlada">vk.com/ravlada</a>
+        </p>
+      </div>
+    </details>
+    <div id="board"></div>
+    <button data-update-userpic>Обновить аватар</button>
+
+    <script src="/vendors/jquery.min.js"></script>
+    <script src="/vendors/drawingboard.min.js"></script>
   </body>
 </html>
